@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+       /* class Persona{
+            #nombreCompleto;
+            #edad;
+
+            constructor( ) {
+                this.#nombreCompleto = ' ';
+                this.#edad = 0;
+            }
+
+            set setNombreCompleto(value){
+                this.#nombreCompleto = value;
+            }
+
+            get getNombreCompleto( ){
+                return this.#nombreCompleto;
+            }
+
+            set setEdad(value){
+                this.#edad = value;
+            }
+
+            get getEdad( ){
+                return this.#edad;
+            }
+       
+            saludar( ) {
+                console.log(`Hola, me llamo ` + this.getNombreCompleto + ` y mi edad es ` + this.getEdad +
+                ` años.`);
+            }
+        }
+
+        class Aprendiz extends Persona {
+
+            #ficha;
+            #programa;
+
+            constructor( ){
+                super( );
+                this.#ficha = ' ';
+                this.#programa = ' ';
+            }
+
+            set setFicha(value){
+                this.#ficha = value;
+            }
+
+            get getFicha( ){
+                return this.#ficha;
+            }
+
+            set setPrograma(value){
+                this.#programa = value;
+            }
+
+            get getPrograma( ){
+                return this.#programa;
+            }
+
+            matricula( ){
+                console.log(`Estoy inscrito en la ficha ` + this.getFicha + ` del programa ` + this.getPrograma);
+            }
+        }
+
+        class Instructor extends Persona{
+
+            #profesion;
+            #tipoVinculacion;
+
+            constructor( ){
+                super( );
+                this.#profesion = ' ';
+                this.#tipoVinculacion = ' ';
+            }
+
+            set setProfesion(value){
+                this.#profesion = value;
+            }
+
+            get getProfesion( ){
+                return this.#profesion;
+            }
+
+            set setTipoVinculacion(value){
+                this.#tipoVinculacion = value;
+            }
+
+            get getTipoVinculacion( ){
+                return this.#tipoVinculacion;
+            }
+
+            contrato( ){
+                console.log(`Mi profesión es ` + this.getProfesion + ` y mi vinculación es de tipo ` + this.getTipoVinculacion);
+            }
+        }
+
+        class InstructorPlanta extends Instructor{
+
+            #fechaVinculacion;
+
+            constructor( ){
+                super( );
+                this.#fechaVinculacion = 0;
+            }
+
+            set setFechaVinculacion(value){
+                this.#fechaVinculacion = value;
+            }
+
+            get getFechaVinculacion( ){
+                return this.#fechaVinculacion;
+            }
+
+            contrato( ){
+                console.log(`Mi profesión es ` + this.getProfesion + `con vinculación de tipo ` + this.getTipoVinculacion +
+                ` desde el año ` + this.getFechaVinculacion);  
+            }
+        }
+
+        const aprendiz1 = new Aprendiz;
+
+        aprendiz1.setNombreCompleto = 'Julian';
+        aprendiz1.setEdad = 18;
+        aprendiz1.setFicha = '2798618';
+        aprendiz1.setPrograma = 'Análisis y desarrollo de software';
+
+        aprendiz1.saludar( );
+        aprendiz1.matricula( );
+
+        const aprendiz2 = new Aprendiz;
+
+        aprendiz2.setNombreCompleto = 'Sandra';
+        aprendiz2.setEdad = 25;
+        aprendiz2.setFicha = '2756234';
+        aprendiz2.setPrograma = 'Construcción';
+
+        aprendiz2.saludar( );
+        aprendiz2.matricula( );
+
+        const instructor2 = new InstructorPlanta;
+
+        instructor2.setNombreCompleto = 'German Antonio';
+        instructor2.setEdad = 35;
+        instructor2.setProfesion = 'Ingeniero de sistemas';
+        instructor2.setTipoVinculacion = 'Planta';
+        instructor2.setFechaVinculacion = 2019;
+
+        instructor2.saludar( );
+        instructor2.contrato( ); */
+
+        class Persona{
+
+            #documento;
+            #nombreCompleto;
+
+            constructor( ){
+                this.#documento = ' ';
+                this.#nombreCompleto = ' ';
+            }
+
+            set setDocumento(value) {
+                this.#documento = value;
+            }
+
+            get getDocumento( ){
+                return this.#documento;
+            }
+
+            set setNombreCompleto(value){
+                this.#nombreCompleto = value;
+            }
+
+            get getNombreCompleto( ){
+                return this.#nombreCompleto;
+            }
+
+            informacion( ){
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` y mi número de documento es ` + 
+                this.getDocumento);
+            }
+        }
+
+        class Aprendiz extends Persona{
+
+            #ficha;
+            #programa;
+            #fechaInicio;
+            #fechaTerminacion;
+
+
+            constructor( ){
+                super( );
+                this.#ficha = ' ';
+                this.#programa = ' ';
+                this.#fechaInicio = ' ';
+                this.#fechaTerminacion = ' ';
+            }
+
+            set setFicha(value){
+                this.#ficha = value;
+            }
+
+            get getFicha( ){
+                return this.#ficha;
+            }
+
+            set setPrograma(value){
+                this.#programa = value;
+            }
+
+            get getPrograma( ){
+                return this.#programa;
+            }
+
+            set setFechaInicio(value){
+                this.#fechaInicio = value;
+            }
+
+            get getFechaInicio( ){
+                return this.#fechaInicio;
+            }
+
+            set setFechaTerminacion(value){
+                this.#fechaTerminacion = value;
+            }
+
+            get getFechaTerminacion( ){
+                return this.#fechaTerminacion;
+            }
+
+            matricula( ){
+                console.log(`Estoy matriculado en el programa ` + this.getPrograma+ ` y estoy en la ficha ` + this.getFicha);
+            }
+        }
+
+        class AprendizEtapaLectiva extends Aprendiz{
+
+            #numeroTrimestre;
+            #fechaInicio;
+            #fechaTerminacion;
+
+            constructor( ){
+                super( );
+                this.#numeroTrimestre = ' ';
+            }
+
+            set setNumeroTrimestre(value){
+                this.#numeroTrimestre = value;
+            }
+
+            get getNumetoTrimestre( ){
+                return this.#numeroTrimestre;
+            }
+
+            informacion( ){
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
+                + this.getDocumento + ` estoy matriculado en el programa ` + this.getPrograma + 
+                ` mi número de ficha es ` + this.getFicha + `, estoy en el trimestre ` + this.getNumetoTrimestre +
+                `. Inicie formación en la fecha ` + this.getFechaInicio + ` y la fecha de finalización es ` + 
+                this.getFechaTerminacion);
+            }
+
+            estado( ){
+                console.log(`Me encuentro realizando la Etapa Lectiva`);
+            }
+        }
+
+        class AprendizEtapaPractica extends Aprendiz{
+
+            #modalidad;
+
+            constructor( ){
+                super( );
+                this.#modalidad = ' ';
+            }
+
+            set setModalidad(value){
+                this.#modalidad = value;
+            }
+
+            get getModalidad( ){
+                return this.#modalidad;
+            }
+
+            informacion( ){
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
+                + this.getDocumento + ` estoy matriculado en el programa ` + this.getPrograma + 
+                ` mi número de ficha es ` + this.getFicha + `, estoy en la modalidad ` + this.getModalidad +
+                `. Inicie formación en la fecha ` + this.getFechaInicio + ` y la fecha de finalización es ` + 
+                this.getFechaTerminacion);
+            }
+
+            estado( ){
+                console.log(`Me encuentro realizando la Etapa Practica`);
+            }
+        }
+
+        class Instructor extends Persona{
+
+            #profesion;
+            #salarioBasico;
+            #fechaVinculacion;
+
+            constructor( ) {
+                super( );
+                this.#profesion = ' ';
+                this.#salarioBasico = 0;
+                this.#fechaVinculacion = ' ';
+            }
+
+            set setProfesion(value){
+                this.#profesion = value;
+            }
+
+            get getProfesion( ){
+                return this.#profesion;
+            }
+
+            set setSalarioBasico(value){
+                this.#salarioBasico = value;
+            }
+
+            get getSalarioBasico( ){
+                return this.#salarioBasico;
+            }
+
+            set setFechaVinculacion(value){
+                this.#fechaVinculacion = value;
+            }
+
+            get getFechaVinculacion( ){
+                return this.#fechaVinculacion;
+            }
+
+
+            contrato( ){
+                console.log(`Mi contrato es de instructor de planta`);
+            }
+        }
+
+        class InstructorPlanta extends Instructor{
+
+            #grado;
+
+            constructor( ){
+                super( );
+                this.#grado = 0;
+            }
+
+            set setGrado(value){
+                this.#grado = value;
+            }
+
+            get getGrado( ){
+                return this.#grado;
+            }
+
+            informacion( ){
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
+                + this.getDocumento + ` soy profesional en ` + this.getProfesion + `, mi salario es de $` + this.getSalarioBasico 
+                + ` con un grado ` + this.getGrado + ` y mi fecha de vinculación es el: ` + this.getFechaVinculacion);
+            }
+
+            estado( ){
+                console.log(`Actualmente estoy activo como instructor de planta`)
+            }
+
+            sueldo( ){
+
+                this.#grado = Math.floor(Math.random() * 20);
+                let totalGrado = 100000 * this.getGrado;
+                let sueldo = totalGrado + this.getSalarioBasico;
+                return sueldo;
+            }
+        }
+
+        class InstructorContrato extends Instructor{
+
+            #duracionContrato;
+
+            constructor( ){
+                super( );
+                this.#duracionContrato = 0;
+            }
+
+            set setDuracionContrato(value){
+                this.#duracionContrato = value;
+            }
+
+            get getDuracionContrato( ){
+                return this.#duracionContrato;
+            }
+
+            informacion( ){
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
+                + this.getDocumento + ` soy profesional en ` + this.getProfesion + `, mi salario es de $` + this.getSalarioBasico 
+                + ` mi contrato tiene una duración de ` + this.getDuracionContrato + ` meses, y mi fecha de vinculación es el: ` + this.getFechaVinculacion);
+            }
+
+            estado( ){
+                const fechaInicio = new Date(this.getFechaVinculacion);
+
+                    fechaInicio.setMonth(fechaInicio.getMonth() + this.getDuracionContrato);
+
+                    const dia = fechaInicio.getDate();
+                    const mes = fechaInicio.getMonth() + 1;
+                    const anio = fechaInicio.getFullYear();
+
+                    const fechaFinal = `${dia}/${mes}/${anio}`;
+
+                    console.log(`La fecha de terminación de mi contrato laboral es: ${fechaFinal}`);
+            }
+
+            sueldo( ){
+                return this.getSalarioBasico;
+            }
+        }
+
+        console.log('Aprendiz etapa lectiva');
+
+        const aprendiz1 = new AprendizEtapaLectiva;
+
+        aprendiz1.setDocumento = '1058975663';
+        aprendiz1.setNombreCompleto = 'Juan Rodriguez';
+        aprendiz1.setFicha = '2756314';
+        aprendiz1.setPrograma = 'Recursos Humanos';
+        aprendiz1.setNumeroTrimestre = '3';
+        aprendiz1.setFechaInicio = '9/24/2022';
+        aprendiz1.setFechaTerminacion = '10/24/2024';
+
+        aprendiz1.informacion( );
+        aprendiz1.matricula( );
+        aprendiz1.estado( );
+
+        console.log('Aprendiz etapa practica');
+
+        const aprendiz2 = new AprendizEtapaPractica;
+
+        aprendiz2.setDocumento = '184656127';
+        aprendiz2.setNombreCompleto = 'Mariana Perez';
+        aprendiz2.setFicha = '2894315';
+        aprendiz2.setPrograma = 'Contabilidad';
+        aprendiz2.setModalidad = 'Virtual';
+        aprendiz2.setFechaInicio = '8/06/2021';
+        aprendiz2.setFechaTerminacion = '11/16/2023';
+
+        aprendiz2.informacion( );
+        aprendiz2.matricula( );
+        aprendiz2.estado( );
+
+        console.log('Instructor Planta');
+
+        const instructor1 = new InstructorPlanta;
+
+        instructor1.setDocumento = '785136214';
+        instructor1.setNombreCompleto = 'Carlos Sanchez';
+        instructor1.setProfesion = 'Contaduría pública';
+        instructor1.setSalarioBasico = 1850000;
+        instructor1.setGrado = 0;
+        instructor1.setFechaVinculacion = '5/06/2020';
+
+        instructor1.contrato( );
+        instructor1.informacion( );
+        instructor1.estado( );
+        console.log(`Mi sueldo total es de ${instructor1.sueldo( )}`);
+
+        console.log('Instructor Contrato');
+
+        const instructor2 = new InstructorContrato;
+
+        instructor2.setDocumento = '1098756264';
+        instructor2.setNombreCompleto = 'Martha Lopez';
+        instructor2.setProfesion = 'Administración   de empresas';
+        instructor2.setSalarioBasico = 2200000;
+        instructor2.setDuracionContrato = 11;
+        instructor2.setFechaVinculacion = '2022/12/25';
+
+        instructor2.contrato( );
+        instructor2.informacion( );
+        instructor2.estado( );
+        console.log(`Mi sueldo total es de ${instructor2.sueldo( )}`);
+       
+    </script>
+</body>
+</html>

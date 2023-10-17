@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Producto{
+
+            #codigo;
+            #titulo;
+            #autor;
+
+            constructor( ){
+
+                this.#codigo = ' ';
+                this.#titulo = ' ';
+                this.#autor = ' ';
+            }
+
+            set setCodigo(value){
+                this.#codigo = value;
+            }
+
+            get getCodigo( ){
+                return this.#codigo;
+            }
+
+            set setTitulo(value){
+                this.#titulo = value;
+            }
+
+            get getTitulo( ){
+                return this.#titulo;
+            }
+
+            set setAutor(value){
+                this.#autor = value;
+            }
+
+            get getAutor( ){
+                return this.#autor;
+            }
+
+            informacion( ){
+                console.log(`La información del libro es la siguiente: El código es: ` + this.getCodigo + `el título es: `
+                +this.getTitulo + ` y el autor es: ` + this.getAutor);
+            }
+        }
+
+        class ProductoImpreso extends Producto{
+
+            #editorial;
+            #anio;
+            #precio;
+
+            constructor( ){
+
+                super( );
+                this.#editorial = ' ';
+                this.#anio = ' ';
+                this.#precio = 0;
+            }
+
+            set setEditorial(value){
+                this.#editorial = value;
+            }
+
+            get getEditorial( ){
+                return this.#editorial;
+            }
+
+            set setAnio(value){
+                this.#anio = value;
+            }
+
+            get getAnio( ){
+                return this.#anio;
+            }
+
+            set setPrecio(value){
+                this.#precio = value;
+            }
+
+            get getPrecio( ){
+                return this.#precio;
+            }
+
+            informacion( ){
+                console.log(`La información del libro es la siguiente: El código es: ` + this.getCodigo + `el título es: `
+                +this.getTitulo + ` y el autor es: ` + this.getAutor + `. La editorial es: ` + this.getEditorial + `, el año de publicación
+                del libro fue: ` + this.getAnio + ` y tiene un costo de: ` + this.getPrecio);
+            }
+        }
+
+        class Revista extends ProductoImpreso{
+
+            #volumen;
+
+            constructor( ){
+                super( );
+                this.#volumen = ' ';
+            }
+
+            set setVolumen(value){
+                this.#volumen = value;
+            }
+
+            get getVolumen( ){
+                return this.#volumen;
+            }
+
+            informacion( ){
+                console.log(`La información de la revista es la siguiente: \n` +`El código es: ` + this.getCodigo + `\nEl título es: `
+                +this.getTitulo + `\nEl autor es: ` + this.getAutor + `\nLa editorial es: ` + this.getEditorial + 
+                `\nEl año de publicación del libro fue: ` + this.getAnio + `\nTiene un costo de: ` + this.getPrecio + 
+                `\nEl número de volumen es: ` + this.getVolumen);
+            }
+
+            estado( ){
+                console.log(`El estado de la revista es no disponible`);
+            }
+        }
+
+        class Libro extends ProductoImpreso{
+
+            #idioma;
+
+            constructor( ){
+                super( );
+                this.#idioma = ' ';
+            }
+
+            set setIdioma(value){
+                this.#idioma = value;
+            }
+
+            get getIdioma( ){
+                return this.#idioma;
+            }
+
+            informacion( ){
+                console.log(`La información del libro es la siguiente: El código es: ` + this.getCodigo + `el título es: `
+                +this.getTitulo + ` y el autor es: ` + this.getAutor + `. La editorial es: ` + this.getEditorial + `, el año de publicación
+                del libro fue: ` + this.getAnio + ` y tiene un costo de: ` + this.getPrecio + `El número de volumen es: ` 
+                + this.getVolumen + `Este libro se encuentra disponible en idioma: ` + this.getIdioma);
+            }
+
+            estado( ){
+                console.log(`El estado del libro es disponible`);
+            }
+        }
+
+        class ProductoGrabado extends Producto{
+
+            #tiempoDuracion;
+            #medioTecnologico;
+
+            constructor( ){
+                super( );
+                this.#tiempoDuracion = 0;
+                this.#medioTecnologico = ' ';
+            }
+
+            set setTiempoDuracion(value){
+                this.#tiempoDuracion = value;
+            }
+
+            get getTiempoDuracion( ){
+                return this.#tiempoDuracion;
+            }
+
+            set setMedioTecnologico(value){
+                this.#medioTecnologico = value;
+            }
+
+            get getMedioTecnologico( ){
+                return this.#medioTecnologico;
+            }
+
+            informacion( ){
+                console.log(`La información del producto es la siguiente: El código es: ` + this.getCodigo + `el título es: `
+                +this.getTitulo + ` y el autor es: ` + this.getAutor + `. 
+                El tiempo de duración es de: ` + this.getTiempoDuracion + ` y el medio en el que está disponible es: ` 
+                + this.getMedioTecnologico);
+            }
+        }
+
+        class ProductoSoftware extends Producto{
+
+            #version;
+            #sistemaOperativo;
+
+            constructor( ){
+                super( );
+                this.#version = ' ';
+                this.#sistemaOperativo = 0;
+            }
+
+            set setVersion(value){
+                this.#version = value;
+            }
+
+            get getVersion( ){
+                return this.#version;
+            }
+
+            set setSistemaOperativo(value){
+                this.#sistemaOperativo = value;
+            }
+
+            get getSistemaOperativo( ){
+                return this.#sistemaOperativo;
+            }
+
+            informacion( ){
+                console.log(`La información del producto es la siguiente: El código es: ` + this.getCodigo + `el título es: `
+                +this.getTitulo + ` y el autor es: ` + this.getAutor + `. 
+                El sistema operativo es: ` + this.getSistemaOperativo + ` y la versión en la que está disponible es: ` 
+                + this.getVersion);
+            }
+        }
+
+        console.log('Revista');
+
+        const revista = new Revista;
+
+        revista.setCodigo = '005';
+        revista.setTitulo = '';
+        revista.setAutor = 'Administración   de empresas';
+        revista.setEditorial = 2200000;
+        revista.setAnio = 11;
+        revista.setPrecio = '5/06/2022';
+
+        revista.informacion( );
+        revista.estado( );
+       
+    </script>
+</body>
+</html>
