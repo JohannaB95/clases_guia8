@@ -117,7 +117,7 @@
             informacion( ){
                 console.log(`La información de la revista es la siguiente: \n` +`El código es: ` + this.getCodigo + `\nEl título es: `
                 +this.getTitulo + `\nEl autor es: ` + this.getAutor + `\nLa editorial es: ` + this.getEditorial + 
-                `\nEl año de publicación del libro fue: ` + this.getAnio + `\nTiene un costo de: ` + this.getPrecio + 
+                `\nEl año de publicación de la revista fue: ` + this.getAnio + `\nTiene un costo de: ` + this.getPrecio + 
                 `\nEl número de volumen es: ` + this.getVolumen);
             }
 
@@ -144,10 +144,10 @@
             }
 
             informacion( ){
-                console.log(`La información del libro es la siguiente: El código es: ` + this.getCodigo + `el título es: `
-                +this.getTitulo + ` y el autor es: ` + this.getAutor + `. La editorial es: ` + this.getEditorial + `, el año de publicación
-                del libro fue: ` + this.getAnio + ` y tiene un costo de: ` + this.getPrecio + `El número de volumen es: ` 
-                + this.getVolumen + `Este libro se encuentra disponible en idioma: ` + this.getIdioma);
+                console.log(`La información del libro es la siguiente:\n` + `El código es: ` + this.getCodigo + `\nEl título es: `
+                +this.getTitulo + `\nEl autor es: ` + this.getAutor + `\nLa editorial es: ` + this.getEditorial + 
+                `\nEl año de publicación del libro fue: ` + this.getAnio + `\nTiene un costo de: ` + this.getPrecio + 
+                `\nEste libro se encuentra disponible en idioma: ` + this.getIdioma);
             }
 
             estado( ){
@@ -230,14 +230,30 @@
         const revista = new Revista;
 
         revista.setCodigo = '005';
-        revista.setTitulo = '';
-        revista.setAutor = 'Administración   de empresas';
-        revista.setEditorial = 2200000;
-        revista.setAnio = 11;
-        revista.setPrecio = '5/06/2022';
+        revista.setTitulo = 'Revisa semana';
+        revista.setAutor = 'Varios ';
+        revista.setEditorial = 'Semana';
+        revista.setAnio = '2023';
+        revista.setPrecio = 15000;
+        revista.setVolumen = 'Volumen 4'
 
         revista.informacion( );
         revista.estado( );
+
+        console.log('Libro');
+
+        const libro = new Libro;
+
+        libro.setCodigo = '010';
+        libro.setTitulo = 'Alicia en el país de las maravillas';
+        libro.setAutor = 'Lewiss Carroll';
+        libro.setEditorial = 'Planeta';
+        libro.setAnio = '1865';
+        libro.setPrecio = 45000;
+        libro.setIdioma = 'Español'
+
+        libro.informacion( );
+        libro.estado( );
        
     </script>
 </body>
