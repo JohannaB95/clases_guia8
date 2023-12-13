@@ -1,435 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reto 1</title>
 </head>
+
 <body>
-    
+
     <script>
 
-       /* class Persona{
-            #nombreCompleto;
-            #edad;
+        /* class Persona{
+             #nombreCompleto;
+             #edad;
+ 
+             constructor( ) {
+                 this.#nombreCompleto = ' ';
+                 this.#edad = 0;
+             }
+ 
+             set setNombreCompleto(value){
+                 this.#nombreCompleto = value;
+             }
+ 
+             get getNombreCompleto( ){
+                 return this.#nombreCompleto;
+             }
+ 
+             set setEdad(value){
+                 this.#edad = value;
+             }
+ 
+             get getEdad( ){
+                 return this.#edad;
+             }
+        
+             saludar( ) {
+                 console.log(`Hola, me llamo ` + this.getNombreCompleto + ` y mi edad es ` + this.getEdad +
+                 ` años.`);
+             }
+         }
+ 
+         class Aprendiz extends Persona {
+ 
+             #ficha;
+             #programa;
+ 
+             constructor( ){
+                 super( );
+                 this.#ficha = ' ';
+                 this.#programa = ' ';
+             }
+ 
+             set setFicha(value){
+                 this.#ficha = value;
+             }
+ 
+             get getFicha( ){
+                 return this.#ficha;
+             }
+ 
+             set setPrograma(value){
+                 this.#programa = value;
+             }
+ 
+             get getPrograma( ){
+                 return this.#programa;
+             }
+ 
+             matricula( ){
+                 console.log(`Estoy inscrito en la ficha ` + this.getFicha + ` del programa ` + this.getPrograma);
+             }
+         }
+ 
+         class Instructor extends Persona{
+ 
+             #profesion;
+             #tipoVinculacion;
+ 
+             constructor( ){
+                 super( );
+                 this.#profesion = ' ';
+                 this.#tipoVinculacion = ' ';
+             }
+ 
+             set setProfesion(value){
+                 this.#profesion = value;
+             }
+ 
+             get getProfesion( ){
+                 return this.#profesion;
+             }
+ 
+             set setTipoVinculacion(value){
+                 this.#tipoVinculacion = value;
+             }
+ 
+             get getTipoVinculacion( ){
+                 return this.#tipoVinculacion;
+             }
+ 
+             contrato( ){
+                 console.log(`Mi profesión es ` + this.getProfesion + ` y mi vinculación es de tipo ` + this.getTipoVinculacion);
+             }
+         }
+ 
+         class InstructorPlanta extends Instructor{
+ 
+             #fechaVinculacion;
+ 
+             constructor( ){
+                 super( );
+                 this.#fechaVinculacion = 0;
+             }
+ 
+             set setFechaVinculacion(value){
+                 this.#fechaVinculacion = value;
+             }
+ 
+             get getFechaVinculacion( ){
+                 return this.#fechaVinculacion;
+             }
+ 
+             contrato( ){
+                 console.log(`Mi profesión es ` + this.getProfesion + `con vinculación de tipo ` + this.getTipoVinculacion +
+                 ` desde el año ` + this.getFechaVinculacion);  
+             }
+         }
+ 
+         const aprendiz1 = new Aprendiz;
+ 
+         aprendiz1.setNombreCompleto = 'Julian';
+         aprendiz1.setEdad = 18;
+         aprendiz1.setFicha = '2798618';
+         aprendiz1.setPrograma = 'Análisis y desarrollo de software';
+ 
+         aprendiz1.saludar( );
+         aprendiz1.matricula( );
+ 
+         const aprendiz2 = new Aprendiz;
+ 
+         aprendiz2.setNombreCompleto = 'Sandra';
+         aprendiz2.setEdad = 25;
+         aprendiz2.setFicha = '2756234';
+         aprendiz2.setPrograma = 'Construcción';
+ 
+         aprendiz2.saludar( );
+         aprendiz2.matricula( );
+ 
+         const instructor2 = new InstructorPlanta;
+ 
+         instructor2.setNombreCompleto = 'German Antonio';
+         instructor2.setEdad = 35;
+         instructor2.setProfesion = 'Ingeniero de sistemas';
+         instructor2.setTipoVinculacion = 'Planta';
+         instructor2.setFechaVinculacion = 2019;
+ 
+         instructor2.saludar( );
+         instructor2.contrato( ); */
 
-            constructor( ) {
-                this.#nombreCompleto = ' ';
-                this.#edad = 0;
-            }
+        //Se define la clase Persona
+        class Persona {
 
-            set setNombreCompleto(value){
-                this.#nombreCompleto = value;
-            }
-
-            get getNombreCompleto( ){
-                return this.#nombreCompleto;
-            }
-
-            set setEdad(value){
-                this.#edad = value;
-            }
-
-            get getEdad( ){
-                return this.#edad;
-            }
-       
-            saludar( ) {
-                console.log(`Hola, me llamo ` + this.getNombreCompleto + ` y mi edad es ` + this.getEdad +
-                ` años.`);
-            }
-        }
-
-        class Aprendiz extends Persona {
-
-            #ficha;
-            #programa;
-
-            constructor( ){
-                super( );
-                this.#ficha = ' ';
-                this.#programa = ' ';
-            }
-
-            set setFicha(value){
-                this.#ficha = value;
-            }
-
-            get getFicha( ){
-                return this.#ficha;
-            }
-
-            set setPrograma(value){
-                this.#programa = value;
-            }
-
-            get getPrograma( ){
-                return this.#programa;
-            }
-
-            matricula( ){
-                console.log(`Estoy inscrito en la ficha ` + this.getFicha + ` del programa ` + this.getPrograma);
-            }
-        }
-
-        class Instructor extends Persona{
-
-            #profesion;
-            #tipoVinculacion;
-
-            constructor( ){
-                super( );
-                this.#profesion = ' ';
-                this.#tipoVinculacion = ' ';
-            }
-
-            set setProfesion(value){
-                this.#profesion = value;
-            }
-
-            get getProfesion( ){
-                return this.#profesion;
-            }
-
-            set setTipoVinculacion(value){
-                this.#tipoVinculacion = value;
-            }
-
-            get getTipoVinculacion( ){
-                return this.#tipoVinculacion;
-            }
-
-            contrato( ){
-                console.log(`Mi profesión es ` + this.getProfesion + ` y mi vinculación es de tipo ` + this.getTipoVinculacion);
-            }
-        }
-
-        class InstructorPlanta extends Instructor{
-
-            #fechaVinculacion;
-
-            constructor( ){
-                super( );
-                this.#fechaVinculacion = 0;
-            }
-
-            set setFechaVinculacion(value){
-                this.#fechaVinculacion = value;
-            }
-
-            get getFechaVinculacion( ){
-                return this.#fechaVinculacion;
-            }
-
-            contrato( ){
-                console.log(`Mi profesión es ` + this.getProfesion + `con vinculación de tipo ` + this.getTipoVinculacion +
-                ` desde el año ` + this.getFechaVinculacion);  
-            }
-        }
-
-        const aprendiz1 = new Aprendiz;
-
-        aprendiz1.setNombreCompleto = 'Julian';
-        aprendiz1.setEdad = 18;
-        aprendiz1.setFicha = '2798618';
-        aprendiz1.setPrograma = 'Análisis y desarrollo de software';
-
-        aprendiz1.saludar( );
-        aprendiz1.matricula( );
-
-        const aprendiz2 = new Aprendiz;
-
-        aprendiz2.setNombreCompleto = 'Sandra';
-        aprendiz2.setEdad = 25;
-        aprendiz2.setFicha = '2756234';
-        aprendiz2.setPrograma = 'Construcción';
-
-        aprendiz2.saludar( );
-        aprendiz2.matricula( );
-
-        const instructor2 = new InstructorPlanta;
-
-        instructor2.setNombreCompleto = 'German Antonio';
-        instructor2.setEdad = 35;
-        instructor2.setProfesion = 'Ingeniero de sistemas';
-        instructor2.setTipoVinculacion = 'Planta';
-        instructor2.setFechaVinculacion = 2019;
-
-        instructor2.saludar( );
-        instructor2.contrato( ); */
-
-        class Persona{
-
+            // Se declaran los atributos de la clase y que serán privados
             #documento;
             #nombreCompleto;
 
-            constructor( ){
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                //Se inicializa documento como un string vacio
                 this.#documento = ' ';
+                //Se inicializa nombreCompleto como un string vacio
                 this.#nombreCompleto = ' ';
             }
 
+            //Se crea un método setter para establecer el valor del atributo #documento
             set setDocumento(value) {
                 this.#documento = value;
             }
 
-            get getDocumento( ){
+            //Se crea un método getter para obtener el valor del atributo #documento
+            get getDocumento() {
                 return this.#documento;
             }
 
-            set setNombreCompleto(value){
+            //Se crea un método setter para establecer el valor del atributo #nombreCompleto
+            set setNombreCompleto(value) {
                 this.#nombreCompleto = value;
             }
 
-            get getNombreCompleto( ){
+            //Se crea un método getter para obtener el valor del atributo #nombreCompleto
+            get getNombreCompleto() {
                 return this.#nombreCompleto;
             }
 
-            informacion( ){
-                console.log(`Mi nombre es ` + this.getNombreCompleto + ` y mi número de documento es ` + 
-                this.getDocumento);
+            //Se crea un método llamado informacion sin parámetros
+            informacion() {
+                //Se imprime en la consola la información de la persona
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` y mi número de documento es ` +
+                    this.getDocumento);
             }
         }
 
-        class Aprendiz extends Persona{
+        //Se define la clase Aprendiz que hereda propiedades o métodos de la clase Persona
+        class Aprendiz extends Persona {
 
+            // Se declaran los atributos de la clase y que serán privados
             #ficha;
             #programa;
             #fechaInicio;
             #fechaTerminacion;
 
-
-            constructor( ){
-                super( );
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
+                super();
+                //Se inicializa ficha como un string vacio
                 this.#ficha = ' ';
+                //Se inicializa programa como un string vacio
                 this.#programa = ' ';
+                //Se inicializa fechaIniciocomo un string vacio
                 this.#fechaInicio = ' ';
+                //Se inicializa fechaTerminacion como un string vacio
                 this.#fechaTerminacion = ' ';
             }
 
-            set setFicha(value){
+            //Se crea un método setter para establecer el valor del atributo #ficha
+            set setFicha(value) {
                 this.#ficha = value;
             }
 
-            get getFicha( ){
+            //Se crea un método getter para obtener el valor del atributo #ficha
+            get getFicha() {
                 return this.#ficha;
             }
 
-            set setPrograma(value){
+            //Se crea un método setter para establecer el valor del atributo #programa
+            set setPrograma(value) {
                 this.#programa = value;
             }
 
-            get getPrograma( ){
+            //Se crea un método getter para obtener el valor del atributo #programa
+            get getPrograma() {
                 return this.#programa;
             }
 
-            set setFechaInicio(value){
+            //Se crea un método setter para establecer el valor del atributo #fechaInicio
+            set setFechaInicio(value) {
                 this.#fechaInicio = value;
             }
 
-            get getFechaInicio( ){
+            //Se crea un método getter para obtener el valor del atributo #fechaInicio
+            get getFechaInicio() {
                 return this.#fechaInicio;
             }
 
-            set setFechaTerminacion(value){
+            //Se crea un método setter para establecer el valor del atributo #fechaTerminacion
+            set setFechaTerminacion(value) {
                 this.#fechaTerminacion = value;
             }
 
-            get getFechaTerminacion( ){
+            //Se crea un método getter para obtener el valor del atributo #fechaTerminacion
+            get getFechaTerminacion() {
                 return this.#fechaTerminacion;
             }
 
-            matricula( ){
-                console.log(`Estoy matriculado en el programa ` + this.getPrograma+ ` y estoy en la ficha ` + this.getFicha);
+            //Se crea un método llamado matricula sin parámetros
+            matricula() {
+                //Se imprime en la consola un mensaje indicando el programa y ficha a la que pertenece el aprendiz
+                console.log(`Estoy matriculado en el programa ` + this.getPrograma + ` y estoy en la ficha ` + this.getFicha);
             }
         }
 
-        class AprendizEtapaLectiva extends Aprendiz{
+        //Se define la clase AprendizEtapaLectiva que hereda propiedades o métodos de la clase Aprendiz
+        class AprendizEtapaLectiva extends Aprendiz {
 
+            // Se declaran los atributos de la clase y que serán privados
             #numeroTrimestre;
             #fechaInicio;
             #fechaTerminacion;
 
-            constructor( ){
-                super( );
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
+                super();
+                //Se inicializa numeroTrimestre como un string vacio
                 this.#numeroTrimestre = ' ';
             }
 
-            set setNumeroTrimestre(value){
+            //Se crea un método setter para establecer el valor del atributo #numeroTrimestre
+            set setNumeroTrimestre(value) {
                 this.#numeroTrimestre = value;
             }
 
-            get getNumetoTrimestre( ){
+            //Se crea un método getter para obtener el valor del atributo #numeroTrimestre
+            get getNumetoTrimestre() {
                 return this.#numeroTrimestre;
             }
 
-            informacion( ){
-                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
-                + this.getDocumento + ` estoy matriculado en el programa ` + this.getPrograma + 
-                ` mi número de ficha es ` + this.getFicha + `, estoy en el trimestre ` + this.getNumetoTrimestre +
-                `. Inicie formación en la fecha ` + this.getFechaInicio + ` y la fecha de finalización es ` + 
-                this.getFechaTerminacion);
+            //Se crea un método llamado informacion sin parámetros
+            informacion() {
+                //Se imprime en la consola la información del aprendiz de etapa electiva
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es `
+                    + this.getDocumento + ` estoy matriculado en el programa ` + this.getPrograma +
+                    ` mi número de ficha es ` + this.getFicha + `, estoy en el trimestre ` + this.getNumetoTrimestre +
+                    `. Inicie formación en la fecha ` + this.getFechaInicio + ` y la fecha de finalización es ` +
+                    this.getFechaTerminacion);
             }
 
-            estado( ){
+            //Se crea un método llamado estado sin parámetros
+            estado() {
+                //Se imprime en la consola un mensaje diciendo en que etapa se encuentra el aprendiz
                 console.log(`Me encuentro realizando la Etapa Lectiva`);
             }
         }
 
-        class AprendizEtapaPractica extends Aprendiz{
+        //Se define la clase AprendizEtapaPractica que hereda propiedades o métodos de la clase Aprendiz
+        class AprendizEtapaPractica extends Aprendiz {
 
+            // Se declaran los atributos de la clase y que serán privados
             #modalidad;
 
-            constructor( ){
-                super( );
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
+                super();
+                //Se inicializa modalidad como un string vacio
                 this.#modalidad = ' ';
             }
 
-            set setModalidad(value){
+            //Se crea un método setter para establecer el valor del atributo #modalidad
+            set setModalidad(value) {
                 this.#modalidad = value;
             }
 
-            get getModalidad( ){
+            //Se crea un método getter para obtener el valor del atributo #modalidad
+            get getModalidad() {
                 return this.#modalidad;
             }
 
-            informacion( ){
-                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
-                + this.getDocumento + ` estoy matriculado en el programa ` + this.getPrograma + 
-                ` mi número de ficha es ` + this.getFicha + `, estoy en la modalidad ` + this.getModalidad +
-                `. Inicie formación en la fecha ` + this.getFechaInicio + ` y la fecha de finalización es ` + 
-                this.getFechaTerminacion);
+            //Se crea un método llamado informacion sin parámetros
+            informacion() {
+                //Se imprime en la consola la información del aprendiz de etapa practica
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es `
+                    + this.getDocumento + ` estoy matriculado en el programa ` + this.getPrograma +
+                    ` mi número de ficha es ` + this.getFicha + `, estoy en la modalidad ` + this.getModalidad +
+                    `. Inicie formación en la fecha ` + this.getFechaInicio + ` y la fecha de finalización es ` +
+                    this.getFechaTerminacion);
             }
 
-            estado( ){
+            //Se crea un método llamado estado sin parámetros
+            estado() {
+                //Se imprime en la consola un mensaje diciendo en que etapa se encuentra el aprendiz
                 console.log(`Me encuentro realizando la Etapa Practica`);
             }
         }
 
-        class Instructor extends Persona{
+        //Se define la clase Instructor que hereda propiedades o métodos de la clase Persona
+        class Instructor extends Persona {
 
+            // Se declaran los atributos de la clase y que serán privados
             #profesion;
             #salarioBasico;
             #fechaVinculacion;
 
-            constructor( ) {
-                super( );
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
+                super();
+                //Se inicializa profesion como un string vacio
                 this.#profesion = ' ';
+                //Se inicializa salarioBasico con un valor de 0
                 this.#salarioBasico = 0;
+                //Se inicializa fechaVinculacion como un string vacio
                 this.#fechaVinculacion = ' ';
             }
 
-            set setProfesion(value){
+            //Se crea un método setter para establecer el valor del atributo #profesion
+            set setProfesion(value) {
                 this.#profesion = value;
             }
 
-            get getProfesion( ){
+            //Se crea un método getter para obtener el valor del atributo #profesion
+            get getProfesion() {
                 return this.#profesion;
             }
 
-            set setSalarioBasico(value){
+            //Se crea un método setter para establecer el valor del atributo #salarioBasico
+            set setSalarioBasico(value) {
                 this.#salarioBasico = value;
             }
 
-            get getSalarioBasico( ){
+            //Se crea un método getter para obtener el valor del atributo #salarioBasico
+            get getSalarioBasico() {
                 return this.#salarioBasico;
             }
 
-            set setFechaVinculacion(value){
+            //Se crea un método setter para establecer el valor del atributo #fechaVinculacion
+            set setFechaVinculacion(value) {
                 this.#fechaVinculacion = value;
             }
 
-            get getFechaVinculacion( ){
+            //Se crea un método getter para obtener el valor del atributo #fechaVinculacion
+            get getFechaVinculacion() {
                 return this.#fechaVinculacion;
             }
 
-
-            contrato( ){
+            //Se crea un método llamado contrato sin parámetros
+            contrato() {
+                //Se imprime en la consola un mensaje indicando el tipo de contrato del instructor
                 console.log(`Mi contrato es de instructor de planta`);
             }
         }
 
-        class InstructorPlanta extends Instructor{
+        //Se define la clase InstructorPlanta que hereda propiedades o métodos de la clase Instructor
+        class InstructorPlanta extends Instructor {
 
+            // Se declaran los atributos de la clase y que serán privados
             #grado;
 
-            constructor( ){
-                super( );
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
+                super();
+                //Se inicializa grado con un valor de 0
                 this.#grado = 0;
             }
 
-            set setGrado(value){
+            //Se crea un método setter para establecer el valor del atributo #grado
+            set setGrado(value) {
                 this.#grado = value;
             }
 
-            get getGrado( ){
+            //Se crea un método getter para obtener el valor del atributo #grado
+            get getGrado() {
                 return this.#grado;
             }
 
-            informacion( ){
-                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
-                + this.getDocumento + ` soy profesional en ` + this.getProfesion + `, mi salario es de $` + this.getSalarioBasico 
-                + ` con un grado ` + this.getGrado + ` y mi fecha de vinculación es el: ` + this.getFechaVinculacion);
+            //Se crea un método llamado informacion sin parámetros
+            informacion() {
+                //Se imprime en la consola información sobre el instructor
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es `
+                    + this.getDocumento + ` soy profesional en ` + this.getProfesion + `, mi salario es de $` + this.getSalarioBasico
+                    + ` con un grado ` + this.getGrado + ` y mi fecha de vinculación es el: ` + this.getFechaVinculacion);
             }
 
-            estado( ){
+            //Se crea un método llamado estado sin parámetros
+            estado() {
+                //Se imprime en la consola información sobre el instructor
                 console.log(`Actualmente estoy activo como instructor de planta`)
             }
 
-            sueldo( ){
-
-                this.#grado = Math.floor(Math.random() * 20);
+            //Se crea un método llamado sueldo sin parámetros
+            sueldo() {
+                //Se genera un número aleatorio del 0 a 20 y se almacena en this.#grado
+                this.#grado = Math.floor(Math.random() * 21);
+                /*Se declara una variable llamada totalGrado que almacena el valor resultante de la multiplicación
+                entre 100000 y el número aleatorio generado en this.#grado*/
                 let totalGrado = 100000 * this.getGrado;
+                /*Se declara una variable llamada sueldo que almacena el valor resultante de la suma entre totalGrado
+                y this.getSalarioBasico*/
                 let sueldo = totalGrado + this.getSalarioBasico;
+                //Se retorna el valor total del sueldo
                 return sueldo;
             }
         }
 
-        class InstructorContrato extends Instructor{
+        //Se define la clase InstructorContrato que hereda propiedades o métodos de la clase Instructor
+        class InstructorContrato extends Instructor {
 
+            // Se declaran los atributos de la clase y que serán privados
             #duracionContrato;
 
-            constructor( ){
-                super( );
+            // Se llama al constructor que inicializa los atributos de la clase
+            constructor() {
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
+                super();
+                //Se inicializa duracionContrato con un valor de 0
                 this.#duracionContrato = 0;
             }
 
-            set setDuracionContrato(value){
+            //Se crea un método setter para establecer el valor del atributo #duracionContrato
+            set setDuracionContrato(value) {
                 this.#duracionContrato = value;
             }
 
-            get getDuracionContrato( ){
+            //Se crea un método getter para obtener el valor del atributo #duracionContrato
+            get getDuracionContrato() {
                 return this.#duracionContrato;
             }
 
-            informacion( ){
-                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es ` 
-                + this.getDocumento + ` soy profesional en ` + this.getProfesion + `, mi salario es de $` + this.getSalarioBasico 
-                + ` mi contrato tiene una duración de ` + this.getDuracionContrato + ` meses, y mi fecha de vinculación es el: ` + this.getFechaVinculacion);
+            //Se crea un método llamado informacion sin parámetros
+            informacion() {
+                //Se imprime en la consola información sobre el instructor
+                console.log(`Mi nombre es ` + this.getNombreCompleto + ` mi número de documento es `
+                    + this.getDocumento + ` soy profesional en ` + this.getProfesion + `, mi salario es de $` + this.getSalarioBasico
+                    + ` mi contrato tiene una duración de ` + this.getDuracionContrato + ` meses, y mi fecha de vinculación es el: ` + this.getFechaVinculacion);
             }
 
-            estado( ){
+            //Se crea un método llamado estado sin parámetros
+            estado() {
+                //Se declara una variable constante llamada fechaInicio que almacena la fecha de vinculación del instructor
                 const fechaInicio = new Date(this.getFechaVinculacion);
 
-                    fechaInicio.setMonth(fechaInicio.getMonth() + this.getDuracionContrato);
+                /*Ajusta la fecha de inicio sumando la duración del contrato en meses. Utiliza getMonth() para obtener
+                el mes actual y setMonth() para establecer el nuevo mes después de sumar la duración del contrato.*/
+                fechaInicio.setMonth(fechaInicio.getMonth() + this.getDuracionContrato);
 
-                    const dia = fechaInicio.getDate();
-                    const mes = fechaInicio.getMonth() + 1;
-                    const anio = fechaInicio.getFullYear();
+                //Se declara una variable constante llamada dia en la que se almacena el día del mes actual después de la modificación.
+                const dia = fechaInicio.getDate();
+                //Se declara una variable constante llamada mes en la que se almacena el mes actual después de la modificación.
+                //Se suma 1, ya que los meses en JavaScript se indexan desde 0.
+                const mes = fechaInicio.getMonth() + 1;
+                //Se declara una variable constante llamada anio en la que se almacena el año actual después de la modificación.
+                const anio = fechaInicio.getFullYear();
 
-                    const fechaFinal = `${dia}/${mes}/${anio}`;
+                /*Se declara una variable constante llamada fechaFinal en la que se almacena la fecha, que combina 
+                día, mes y año en una cadena de texto con formato de fecha.*/
+                const fechaFinal = `${dia}/${mes}/${anio}`;
 
-                    console.log(`La fecha de terminación de mi contrato laboral es: ${fechaFinal}`);
+                //Se imprime en la consola un mensaje indicando la fecha de terminación del contrato del instructor
+                console.log(`La fecha de terminación de mi contrato laboral es: ${fechaFinal}`);
             }
 
-            sueldo( ){
+            //Se crea un método llamado sueldo sin parámetros
+            sueldo() {
+                //Se retorna el valor del sueldo del instructor
                 return this.getSalarioBasico;
             }
         }
 
+        //Se imprime en la consola un mensaje
         console.log('Aprendiz etapa lectiva');
 
+        //Se crea una nueva instancia de la clase AprendizEtapaLectiva y se almacena en la variable constante llamada aprendiz1
         const aprendiz1 = new AprendizEtapaLectiva;
 
+        //Se asignan las propiedades de aprendiz1
         aprendiz1.setDocumento = '1058975663';
         aprendiz1.setNombreCompleto = 'Juan Rodriguez';
         aprendiz1.setFicha = '2756314';
@@ -438,14 +552,18 @@
         aprendiz1.setFechaInicio = '9/24/2022';
         aprendiz1.setFechaTerminacion = '10/24/2024';
 
-        aprendiz1.informacion( );
-        aprendiz1.matricula( );
-        aprendiz1.estado( );
+        //Se llama a los métodos
+        aprendiz1.informacion();
+        aprendiz1.matricula();
+        aprendiz1.estado();
 
+        //Se imprime en la consola un mensaje
         console.log('Aprendiz etapa practica');
 
+        //Se crea una nueva instancia de la clase AprendizEtapaLectiva y se almacena en la variable constante llamada aprendiz2
         const aprendiz2 = new AprendizEtapaPractica;
 
+        //Se asignan las propiedades de aprendiz2
         aprendiz2.setDocumento = '184656127';
         aprendiz2.setNombreCompleto = 'Mariana Perez';
         aprendiz2.setFicha = '2894315';
@@ -454,14 +572,18 @@
         aprendiz2.setFechaInicio = '8/06/2021';
         aprendiz2.setFechaTerminacion = '11/16/2023';
 
-        aprendiz2.informacion( );
-        aprendiz2.matricula( );
-        aprendiz2.estado( );
+        //Se llama a los métodos
+        aprendiz2.informacion();
+        aprendiz2.matricula();
+        aprendiz2.estado();
 
+        //Se imprime en la consola un mensaje
         console.log('Instructor Planta');
 
+        //Se crea una nueva instancia de la clase InstructorPlanta y se almacena en la variable constante llamada instructor1
         const instructor1 = new InstructorPlanta;
 
+        //Se asignan las propiedades de aprendiz2
         instructor1.setDocumento = '785136214';
         instructor1.setNombreCompleto = 'Carlos Sanchez';
         instructor1.setProfesion = 'Contaduría pública';
@@ -469,15 +591,21 @@
         instructor1.setGrado = 0;
         instructor1.setFechaVinculacion = '5/06/2020';
 
-        instructor1.contrato( );
-        instructor1.informacion( );
-        instructor1.estado( );
-        console.log(`Mi sueldo total es de ${instructor1.sueldo( )}`);
+        //Se llama a los métodos
+        instructor1.contrato();
+        instructor1.informacion();
+        instructor1.estado();
 
+        //Se imprime en la consola el sueldo total del instuctor 1
+        console.log(`Mi sueldo total es de ${instructor1.sueldo()}`);
+
+        //Se imprime en la consola un mensaje
         console.log('Instructor Contrato');
 
+        //Se crea una nueva instancia de la clase InstructorContrato y se almacena en la variable constante llamada instructor2
         const instructor2 = new InstructorContrato;
 
+        //Se asignan las propiedades de instructor2
         instructor2.setDocumento = '1098756264';
         instructor2.setNombreCompleto = 'Martha Lopez';
         instructor2.setProfesion = 'Administración   de empresas';
@@ -485,11 +613,15 @@
         instructor2.setDuracionContrato = 11;
         instructor2.setFechaVinculacion = '2022/12/25';
 
-        instructor2.contrato( );
-        instructor2.informacion( );
-        instructor2.estado( );
-        console.log(`Mi sueldo total es de ${instructor2.sueldo( )}`);
-       
+        //Se llama a los métodos
+        instructor2.contrato();
+        instructor2.informacion();
+        instructor2.estado();
+
+        //Se imprime en la consola el sueldo total del instuctor 2
+        console.log(`Mi sueldo total es de ${instructor2.sueldo()}`);
+
     </script>
 </body>
+
 </html>

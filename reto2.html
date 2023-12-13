@@ -3,186 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reto 2</title>
 </head>
 <body>
     
     <script>
 
+        //Se define la clase Producto
         class Producto{
 
+            // Se declaran los atributos de la clase y que serán privados
             #codigo;
             #titulo;
             #autor;
 
+            // Se llama al constructor que inicializa los atributos de la clase
             constructor( ){
-
+                //Se inicializa codigo como un string vacio
                 this.#codigo = ' ';
+                //Se inicializa titulo como un string vacio
                 this.#titulo = ' ';
+                //Se inicializa autor como un string vacio
                 this.#autor = ' ';
             }
 
+            //Se crea un método setter para establecer el valor del atributo #codigo
             set setCodigo(value){
                 this.#codigo = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #codigo
             get getCodigo( ){
                 return this.#codigo;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #titulo
             set setTitulo(value){
                 this.#titulo = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #titulo
             get getTitulo( ){
                 return this.#titulo;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #autor
             set setAutor(value){
                 this.#autor = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #autor
             get getAutor( ){
                 return this.#autor;
             }
 
+            //Se crea un método llamado informacion sin parámetros
             informacion( ){
+                //Se imprime en la consola la información del producto
                 console.log(`La información del libro es la siguiente: El código es: ` + this.getCodigo + `el título es: `
                 +this.getTitulo + ` y el autor es: ` + this.getAutor);
             }
         }
 
+        //Se define la clase ProductoImpreso que hereda propiedades o métodos de la clase Producto
         class ProductoImpreso extends Producto{
 
+            // Se declaran los atributos de la clase y que serán privados
             #editorial;
             #anio;
             #precio;
 
+            // Se llama al constructor que inicializa los atributos de la clase
             constructor( ){
-
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
                 super( );
+                //Se inicializa editorial como un string vacio
                 this.#editorial = ' ';
+                //Se inicializa anio como un string vacio
                 this.#anio = ' ';
+                 //Se inicializa precio con un valor de 0
                 this.#precio = 0;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #editorial
             set setEditorial(value){
                 this.#editorial = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #editorial
             get getEditorial( ){
                 return this.#editorial;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #anio
             set setAnio(value){
                 this.#anio = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #anio
             get getAnio( ){
                 return this.#anio;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #precio
             set setPrecio(value){
                 this.#precio = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #precio
             get getPrecio( ){
                 return this.#precio;
             }
 
+            //Se crea un método llamado informacion sin parámetros
             informacion( ){
+                //Se imprime en la consola la información del producto
                 console.log(`La información del libro es la siguiente: El código es: ` + this.getCodigo + `el título es: `
                 +this.getTitulo + ` y el autor es: ` + this.getAutor + `. La editorial es: ` + this.getEditorial + `, el año de publicación
                 del libro fue: ` + this.getAnio + ` y tiene un costo de: ` + this.getPrecio);
             }
         }
 
+        //Se define la clase Revista que hereda propiedades o métodos de la clase ProductoImpreso
         class Revista extends ProductoImpreso{
 
+            // Se declaran los atributos de la clase y que serán privados
             #volumen;
 
+            // Se llama al constructor que inicializa los atributos de la clase
             constructor( ){
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
                 super( );
+                //Se inicializa volumen como un string vacio
                 this.#volumen = ' ';
             }
 
+            //Se crea un método setter para establecer el valor del atributo #volumen
             set setVolumen(value){
                 this.#volumen = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #volumen
             get getVolumen( ){
                 return this.#volumen;
             }
 
+            //Se crea un método llamado informacion sin parámetros
             informacion( ){
+                //Se imprime en la consola la información del producto
                 console.log(`La información de la revista es la siguiente: \n` +`El código es: ` + this.getCodigo + `\nEl título es: `
                 +this.getTitulo + `\nEl autor es: ` + this.getAutor + `\nLa editorial es: ` + this.getEditorial + 
                 `\nEl año de publicación de la revista fue: ` + this.getAnio + `\nTiene un costo de: ` + this.getPrecio + 
                 `\nEl número de volumen es: ` + this.getVolumen);
             }
 
+            //Se crea un método llamado estado sin parámetros
             estado( ){
+                //Se imprime en la consola un mensaje diciendo el estado del producto
                 console.log(`El estado de la revista es no disponible`);
             }
         }
 
+        //Se define la clase Libro que hereda propiedades o métodos de la clase ProductoImpreso
         class Libro extends ProductoImpreso{
 
+            // Se declaran los atributos de la clase y que serán privados
             #idioma;
 
+            // Se llama al constructor que inicializa los atributos de la clase
             constructor( ){
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
                 super( );
+                //Se inicializa idioma como un string vacio
                 this.#idioma = ' ';
             }
 
+            //Se crea un método setter para establecer el valor del atributo #idioma
             set setIdioma(value){
                 this.#idioma = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #idioma
             get getIdioma( ){
                 return this.#idioma;
             }
 
+            //Se crea un método llamado informacion sin parámetros
             informacion( ){
+                //Se imprime en la consola la información del producto
                 console.log(`La información del libro es la siguiente:\n` + `El código es: ` + this.getCodigo + `\nEl título es: `
                 +this.getTitulo + `\nEl autor es: ` + this.getAutor + `\nLa editorial es: ` + this.getEditorial + 
                 `\nEl año de publicación del libro fue: ` + this.getAnio + `\nTiene un costo de: ` + this.getPrecio + 
                 `\nEste libro se encuentra disponible en idioma: ` + this.getIdioma);
             }
 
+            //Se crea un método llamado estado sin parámetros
             estado( ){
+                //Se imprime en la consola un mensaje diciendo el estado del producto
                 console.log(`El estado del libro es disponible`);
             }
         }
 
+        //Se define la clase ProductoGrabado que hereda propiedades o métodos de la clase Producto
         class ProductoGrabado extends Producto{
 
+            // Se declaran los atributos de la clase y que serán privados
             #tiempoDuracion;
             #medioTecnologico;
 
+            // Se llama al constructor que inicializa los atributos de la clase
             constructor( ){
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
                 super( );
+                //Se inicializa tiempoDuracion con un valor de 0
                 this.#tiempoDuracion = 0;
+                //Se inicializa medioTecnologico como un string vacio
                 this.#medioTecnologico = ' ';
             }
 
+            //Se crea un método setter para establecer el valor del atributo #tiempoDuracion
             set setTiempoDuracion(value){
                 this.#tiempoDuracion = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #tiempoDuracion
             get getTiempoDuracion( ){
                 return this.#tiempoDuracion;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #medioTecnologico
             set setMedioTecnologico(value){
                 this.#medioTecnologico = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #medioTecnologico
             get getMedioTecnologico( ){
                 return this.#medioTecnologico;
             }
 
+            //Se crea un método llamado informacion sin parámetros
             informacion( ){
+                //Se imprime en la consola la información del producto
                 console.log(`La información del producto es la siguiente: El código es: ` + this.getCodigo + `el título es: `
                 +this.getTitulo + ` y el autor es: ` + this.getAutor + `. 
                 El tiempo de duración es de: ` + this.getTiempoDuracion + ` y el medio en el que está disponible es: ` 
@@ -190,34 +255,47 @@
             }
         }
 
+        //Se define la clase ProductoSoftware que hereda propiedades o métodos de la clase Producto
         class ProductoSoftware extends Producto{
 
+            // Se declaran los atributos de la clase y que serán privados
             #version;
             #sistemaOperativo;
 
+            // Se llama al constructor que inicializa los atributos de la clase
             constructor( ){
+                /*Se utiliza dentro del constructor de una clase derivada (subclase) para llamar al constructor de la 
+                clase base (superclase)*/
                 super( );
+                //Se inicializa version como un string vacio
                 this.#version = ' ';
+                //Se inicializa sistemaOperativo con un valor de 0
                 this.#sistemaOperativo = 0;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #version
             set setVersion(value){
                 this.#version = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #version
             get getVersion( ){
                 return this.#version;
             }
 
+            //Se crea un método setter para establecer el valor del atributo #sistemaOperativo
             set setSistemaOperativo(value){
                 this.#sistemaOperativo = value;
             }
 
+            //Se crea un método getter para obtener el valor del atributo #sistemaOperativo
             get getSistemaOperativo( ){
                 return this.#sistemaOperativo;
             }
 
+            //Se crea un método llamado informacion sin parámetros
             informacion( ){
+                //Se imprime en la consola la información del producto
                 console.log(`La información del producto es la siguiente: El código es: ` + this.getCodigo + `el título es: `
                 +this.getTitulo + ` y el autor es: ` + this.getAutor + `. 
                 El sistema operativo es: ` + this.getSistemaOperativo + ` y la versión en la que está disponible es: ` 
@@ -225,10 +303,13 @@
             }
         }
 
+        //Se imprime en la consola un mensaje
         console.log('Revista');
 
+        //Se crea una nueva instancia de la clase Revista y se almacena en la variable constante llamada revista
         const revista = new Revista;
 
+        //Se asignan las propiedades de revista
         revista.setCodigo = '005';
         revista.setTitulo = 'Revisa semana';
         revista.setAutor = 'Varios ';
@@ -237,13 +318,17 @@
         revista.setPrecio = 15000;
         revista.setVolumen = 'Volumen 4'
 
+        //Se llama a los métodos
         revista.informacion( );
         revista.estado( );
 
+        //Se imprime en la consola un mensaje
         console.log('Libro');
 
+        //Se crea una nueva instancia de la clase Libro y se almacena en la variable constante llamada libro
         const libro = new Libro;
-
+    
+        //Se asignan las propiedades de libro
         libro.setCodigo = '010';
         libro.setTitulo = 'Alicia en el país de las maravillas';
         libro.setAutor = 'Lewiss Carroll';
@@ -251,7 +336,8 @@
         libro.setAnio = '1865';
         libro.setPrecio = 45000;
         libro.setIdioma = 'Español'
-
+    
+        //Se llama a los métodos
         libro.informacion( );
         libro.estado( );
        
